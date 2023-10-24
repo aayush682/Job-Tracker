@@ -42,32 +42,35 @@
                                 <span class="toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
-                                <ul class="navbar-nav m-auto">
-                                    <% if (!isAuthenticated) { %>
+                                <% if (!isAuthenticated) { %>
+                                    <ul class="navbar-nav m-auto">
                                         <li class="nav-item">
                                             <a href="#about">About Us</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="#contact">Contact</a>
                                         </li>
+                                    </ul>
+                                    <% } else { %>
+                                        <ul class="navbar-nav ml-auto">
+                                            <li>
+                                                <h1 class="btn text-white">
+                                                    <%= Name %>
+                                                </h1>
+                                            <li>
+                                                <a class="btn primary-btn" href="/addJob">Add Job</a>
+                                            </li>
+                                            </li>
+                                            <li>
+                                                <a class="btn primary-btn" href="/logout">Sign Out</a>
+                                            </li>
+                                        </ul>
                                         <% } %>
-                                </ul>
                             </div>
                             <div class="navbar-btn d-none d-sm-inline-block mr-5">
                                 <!-- navbar -->
                                 <ul>
                                     <% if (isAuthenticated) { %>
-                                        <li>
-                                            <h1 class="btn primary-btn">
-                                                <%= Name %>
-                                            </h1>
-                                        <li>
-                                            <a class="btn primary-btn-outline" href="/addJob">Add Job</a>
-                                        </li>
-                                        </li>
-                                        <li>
-                                            <a class="btn primary-btn" href="/logout">Sign Out</a>
-                                        </li>
                                         <% } else { %>
                                             <li>
                                                 <a class="btn primary-btn-outline" href="/login">Sign In</a>

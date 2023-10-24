@@ -75,6 +75,13 @@ body {
   padding: 28px 15px;
   color: var(--white);
 }
+
+@media (max-width: 790px) {
+  .navbar-brand-text {
+    display: none;
+  }
+}
+
 .navbar-one .navbar {
   position: relative;
   padding: 0;
@@ -216,11 +223,12 @@ body {
     color: var(--white);
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (max-width: 991px) {
   .navbar-one .navbar .navbar-btn {
     position: absolute;
     right: 70px;
     top: 3px;
+    left: 50px;
   }
 }
 @media (max-width: 767px) {
