@@ -1,0 +1,62 @@
+<%- include('../layouts/header') %>
+
+    <body>
+        <%- include("../layouts/navbar") %>
+            <section class="signin-area signin-one">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="text-center form-title ">
+                            <h1>Add the Job Application</h1>
+                        </div>
+                        <div class="col-lg-5">
+                            <form action="/addJob" method="POST" autocomplete="off">
+                                <div class="signin-form form-style-two rounded-buttons">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-input">
+                                                <label>Company's Name</label>
+                                                <div class="input-items default">
+                                                    <input type="text" placeholder="Name" name="company" />
+                                                </div>
+                                            </div>
+                                            <!-- form input -->
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-input">
+                                                <label>
+                                                    Position Applying For
+                                                </label>
+                                                <div class="input-items default">
+                                                    <input type="text" placeholder="Position" name="position" />
+                                                </div>
+                                            </div>
+                                            <!-- form input -->
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-input">
+                                                <label>Status Of the Job</label>
+                                                <div class="input-items default">
+                                                    <input type="text" placeholder="Status" name="status" />
+                                                </div>
+                                            </div>
+                                            <!-- form input -->
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-input rounded-buttons">
+                                                <button class=" btn primary-btn-outline rounded-full" type="submit">
+                                                    Add Job
+                                                </button>
+                                            </div>
+                                            <!-- form input -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- signin form -->
+                            </form>
+                        </div>
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- container -->
+            </section>
+            <%- include("../layouts/footer") %>

@@ -1,0 +1,89 @@
+<!--====== NAVBAR ONE PART START ======-->
+<section class="navbar-area navbar-one">
+    <div class="container-fluid">
+        <div class="row">
+
+            <nav class="navbar navbar-expand-lg">
+                <% if (!isAuthenticated) { %>
+                    <a class="navbar-brand ml-5" href="/">
+                        <a class="navbar-brand ml-5" href="/">
+                            <svg fill="#f7f7f7" width="52" height="52" viewBox="0 0 64 64"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M55.5219 55.676C57.7467 53.4285 57.7467 49.7666 55.5219 47.5191L16.7427 8.34285C14.518 6.09535 10.8933 6.09535 8.66854 8.34285C6.44382 10.5903 6.44382 14.2328 8.66854 16.4997L47.4477 55.676C49.6724 57.9235 53.2972 57.9235 55.5219 55.676Z" />
+                                <path
+                                    d="M54.4849 26.7494C56.7096 24.5019 56.7096 20.84 54.4849 18.5925L38.7583 2.68562C36.5336 0.438126 32.9088 0.438126 30.6841 2.68562C28.4595 4.93312 28.4595 8.595 30.6841 10.8425L46.4299 26.7494C48.6546 28.9969 52.2793 28.9969 54.5041 26.7494H54.4849Z" />
+                                <path
+                                    d="M33.5235 61.3149C35.7483 59.0674 35.7483 55.4055 33.5235 53.158L17.7779 37.2511C15.5532 35.0036 11.9284 35.0036 9.7037 37.2511C7.47897 39.4986 7.47897 43.1605 9.7037 45.408L25.4493 61.3149C27.6741 63.5624 31.2988 63.5624 33.5235 61.3149Z" />
+                            </svg>
+                            <span class="navbar-brand-text align-middle">JobTracker</span>
+                        </a>
+                    </a>
+                    <% } else { %>
+                        <a class="navbar-brand ml-5" href="/jobs">
+                            <svg fill="#f7f7f7" width="52" height="52" viewBox="0 0 64 64"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M55.5219 55.676C57.7467 53.4285 57.7467 49.7666 55.5219 47.5191L16.7427 8.34285C14.518 6.09535 10.8933 6.09535 8.66854 8.34285C6.44382 10.5903 6.44382 14.2328 8.66854 16.4997L47.4477 55.676C49.6724 57.9235 53.2972 57.9235 55.5219 55.676Z" />
+                                <path
+                                    d="M54.4849 26.7494C56.7096 24.5019 56.7096 20.84 54.4849 18.5925L38.7583 2.68562C36.5336 0.438126 32.9088 0.438126 30.6841 2.68562C28.4595 4.93312 28.4595 8.595 30.6841 10.8425L46.4299 26.7494C48.6546 28.9969 52.2793 28.9969 54.5041 26.7494H54.4849Z" />
+                                <path
+                                    d="M33.5235 61.3149C35.7483 59.0674 35.7483 55.4055 33.5235 53.158L17.7779 37.2511C15.5532 35.0036 11.9284 35.0036 9.7037 37.2511C7.47897 39.4986 7.47897 43.1605 9.7037 45.408L25.4493 61.3149C27.6741 63.5624 31.2988 63.5624 33.5235 61.3149Z" />
+                            </svg>
+                            <span class="navbar-brand-text align-middle">JobTracker</span>
+                        </a>
+                        <% } %>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                                <span class="toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
+                                <ul class="navbar-nav m-auto">
+                                    <% if (!isAuthenticated) { %>
+                                        <li class="nav-item">
+                                            <a href="#about">About Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#contact">Contact</a>
+                                        </li>
+                                        <% } %>
+                                </ul>
+                            </div>
+                            <div class="navbar-btn d-none d-sm-inline-block mr-5">
+                                <!-- navbar -->
+                                <ul>
+                                    <% if (isAuthenticated) { %>
+                                        <li>
+                                            <h1 class="btn primary-btn">
+                                                <%= Name %>
+                                            </h1>
+                                        <li>
+                                            <a class="btn primary-btn-outline" href="/addJob">Add Job</a>
+                                        </li>
+                                        </li>
+                                        <li>
+                                            <a class="btn primary-btn" href="/logout">Sign Out</a>
+                                        </li>
+                                        <% } else { %>
+                                            <li>
+                                                <a class="btn primary-btn-outline" href="/login">Sign In</a>
+                                            </li>
+                                            <li>
+                                                <a class="btn primary-btn" href="/register">Sign Up</a>
+                                            </li>
+                                            <% } %>
+                                </ul>
+                                <!-- end of navbar -->
+                            </div>
+            </nav>
+            <!-- navbar -->
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+</section>
+<!--====== NAVBAR ONE PART ENDS ======-->

@@ -1,0 +1,55 @@
+<%- include('../layouts/header') %>
+
+    <body>
+        <%- include("../layouts/navbar") %>
+            <div class="container">
+                <div class="row my-4">
+                    <div class="col-lg-12 mt-4 pt-4">
+
+                        <div class="table-responsive mt-4 pt-4 mx-auto">
+                            <% if (jobs!='' ) { %>
+                                <table id="myTable" class="table table-striped text-center">
+                                    <thead>
+                                        <tr class="table-bg">
+                                            <th>ID</th>
+                                            <th>Company</th>
+                                            <th>Position</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-left">
+                                        <% jobs.forEach((job,index)=> { %>
+                                            <tr>
+                                                <td>
+                                                    <%= (index+1) %>
+                                                </td>
+                                                <td>
+                                                    <%= job.company %>
+                                                </td>
+                                                <td>
+                                                    <%= job.position %>
+                                                </td>
+                                                <td>
+                                                    <%= job.status %>
+                                                </td>
+                                                <td>
+                                                    <a href="/editJob/<%= job._id %>" class="text-success"><i
+                                                            class="fas fa-edit fa-lg mx-1"></i></a>
+                                                    <a href="/deleteJob/<%= job._id %>" class="text-danger"><i
+                                                            class="fas fa-trash fa-lg mx-1"></i></a>
+                                                </td>
+                                            </tr>
+                                            <% }) %>
+                                    </tbody>
+                                </table>
+                                <% } else { %> <!-- If the `jobs` array is empty -->
+                                    <h1 class="text-center text-secondary mt-5">No Jobs Added</h1>
+                                    <!-- Display a message indicating no users found -->
+                                    <% } %> <!-- End of the if statement -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include("../layouts/footer") %>
+    </body>
