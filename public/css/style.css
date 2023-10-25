@@ -226,9 +226,8 @@ body {
 @media only screen and (max-width: 991px) {
   .navbar-one .navbar .navbar-btn {
     position: absolute;
-    right: 70px;
     top: 3px;
-    left: 50px;
+    left: 2rem;
   }
 }
 @media (max-width: 767px) {
@@ -686,4 +685,19 @@ footer {
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--primary);
+}
+
+@media (max-width: 767px) {
+  .card-title {
+    font-size: 2rem;
+  }
+  .card-text {
+    font-size: 1.2rem;
+  }
+
+  .card .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
 }
